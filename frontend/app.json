@@ -34,7 +34,7 @@
         "FOREGROUND_SERVICE_LOCATION",
         "VIBRATE"
       ],
-      "package": "com.signo.app",
+      "package": "app.emergent.signospeedguard",
       "googleServicesFile": "./google-services.json"
     },
     "web": {
