@@ -1,0 +1,43 @@
+# ============================================
+# Signo Backend — FastAPI + Motor (MongoDB)
+# ============================================
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# Virtualenvs
+venv/
+.venv/
+env/
+
+# Pytest / coverage
+.pytest_cache/
+.coverage
+htmlcov/
+*.log
+
+# Caches
+.mypy_cache/
+.ruff_cache/
+
+# IDE
+.idea/
+.vscode/
+
+# ============================================
+# NEVER commit the real .env — contient DISCORD_BOT_TOKEN, MONGO_URL
+# ============================================
+.env
+.env.local
+.env.production
+.env.*.local
+
+# But DO commit an example template
+!.env.example
+
+# Tests output
+tests/__pycache__/
+test_reports/

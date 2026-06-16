@@ -1,0 +1,81 @@
+# ============================================
+# Signo — Root .gitignore (Expo + FastAPI + Mongo)
+# ============================================
+
+# IDE & Editors
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+*.pem
+
+# Python (backend)
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+*.log
+
+# Virtualenvs
+venv/
+.venv/
+env/
+
+# Pip / build caches
+pip-cache/
+*.whl
+
+# Test reports & cache
+test_reports/
+
+# MongoDB local dumps
+dump/
+*.rdb
+
+# Emergent internals (do NOT push to GitHub)
+.emergent/
+memory/test_credentials.md
+
+# Generated / auto Dockerfiles from Emergent
+Dockerfile.cloudbuild
+entrypoint.sh
+
+# Build & deployment artifacts
+*.zip
+*.tar.gz
+
+# Signing credentials (security — never commit)
+*.jks
+*.keystore
+*.p8
+*.p12
+*.key
+*.mobileprovision
+
+# Tokens / secrets (extra safety)
+*token.json*
+*credentials.json*
+*secret*
+credentials.json
+.credentials
+
+# Block .env files at root level only (frontend/.env IS needed for EAS build)
+/.env
+/.env.*
+.env.production
+.env.local
+backend/.env
+backend/.env.local
+backend/.env.production
+# Note: frontend/.env IS committed (contains only EXPO_PUBLIC_BACKEND_URL — public)

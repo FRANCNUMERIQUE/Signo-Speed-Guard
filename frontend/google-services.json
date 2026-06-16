@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "90418522957",
+    "project_id": "signo-speed-guard",
+    "storage_bucket": "signo-speed-guard.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:90418522957:android:cb67ae128edf938a622504",
+        "android_client_info": {
+          "package_name": "com.signo.app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAzx7X4-8fJ0N6FwoigGLQpnnQb0MOLx50"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

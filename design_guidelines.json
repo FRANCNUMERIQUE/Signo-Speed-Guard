@@ -1,0 +1,172 @@
+{
+  "app_name": "Signo",
+  "personality": "7 Dark-First Utility DARK with 6 Glass / Luxe surfaces",
+  "personality_one_liner": "A premium, high-contrast driving command center where critical speed data pulses in real-time against a deep night map, enhanced by frosted glass overlays and electric Web3 accents.",
+  "color": {
+    "surface": "#050B2E",
+    "onSurface": "#FFFFFF",
+    "surfaceSecondary": "#0A1244",
+    "onSurfaceSecondary": "#E2E8F0",
+    "surfaceTertiary": "#131B56",
+    "onSurfaceTertiary": "#D1D5DB",
+    "surfaceInverse": "#FFFFFF",
+    "onSurfaceInverse": "#050B2E",
+    "brand": "#7A3CFF",
+    "brandPrimary": "#7A3CFF",
+    "onBrandPrimary": "#FFFFFF",
+    "brandSecondary": "#5C20D6",
+    "onBrandSecondary": "#FFFFFF",
+    "brandTertiary": "#261559",
+    "onBrandTertiary": "#D5C3FF",
+    "success": "#00CC66",
+    "onSuccess": "#00331A",
+    "warning": "#FF9900",
+    "onWarning": "#4D2E00",
+    "error": "#FF3366",
+    "onError": "#FFFFFF",
+    "info": "#3366FF",
+    "onInfo": "#FFFFFF",
+    "border": "#1A235C",
+    "borderStrong": "#7A3CFF",
+    "divider": "#1A235C"
+  },
+  "typography": {
+    "displayFontFamily": "Space Grotesk",
+    "textFontFamily": "Plus Jakarta Sans",
+    "scale": {
+      "sm": 12,
+      "base": 14,
+      "lg": 16,
+      "xl": 20,
+      "2xl": 24
+    }
+  },
+  "spacing": {
+    "rule": "Generous touch targets (min 44pt) for moving vehicles. Avoid cramped layouts. Safe-area must be rigorously respected.",
+    "xs": 4,
+    "sm": 8,
+    "md": 12,
+    "lg": 16,
+    "xl": 24,
+    "2xl": 32,
+    "3xl": 48
+  },
+  "radius_tokens": {
+    "sm": 6,
+    "md": 12,
+    "lg": 20,
+    "pill": 999
+  },
+  "shadow_tier": "0",
+  "navigation": "bottom_tabs",
+  "icon_set": "Phosphor",
+  "glassmorphism": {
+    "enabled": "true",
+    "do's": [
+      "Use glass heavily for UI overlays on top of the map (bottom tab bar, speed sign container, timeline container).",
+      "Pair blur with a translucent tinted base (>= 75% of surface) to ensure text legibility over the busy map."
+    ],
+    "dont's": [
+      "Don't blur full screen backgrounds.",
+      "Don't apply glass to primary data metrics where pure contrast is needed."
+    ]
+  },
+  "platform_libraries": {
+    "glass": {
+      "ios": "expo-glass-effect",
+      "android": "expo-blur",
+      "low_end_android_fallback": "solid surfaceSecondary"
+    },
+    "image": "expo-image",
+    "blur": "expo-blur",
+    "bottom_sheet": "@gorhom/bottom-sheet",
+    "animation": "react-native-reanimated",
+    "gesture": "react-native-gesture-handler"
+  },
+  "screens": [
+    {
+      "name": "Accueil",
+      "purpose": "Full-screen GPS map tracking current speed against the limit with visual warnings.",
+      "states": {
+        "loading": "Map skeleton or deep blue splash with glowing Signo logo.",
+        "empty": "N/A - GPS tracking is always active.",
+        "error": "Loss of GPS signal: Red banner overlay at the top."
+      },
+      "layout": "Root is a full-bleed map. Floating glass panel center-top for the European Speed Sign (White circle, red border, black text). Real-time speed displayed prominently, changing color (Green, Orange, Red) based on compliance. Right edge contains a vertical glass timeline for upcoming limits (500m, 2km). Floating glass bottom tab bar."
+    },
+    {
+      "name": "Trajets",
+      "purpose": "History of past trips with distance, duration, and overspeeding analytics.",
+      "states": {
+        "loading": "Skeleton list rows.",
+        "empty": "Illustration of an empty dark highway with 'Aucun trajet enregistré' and a 'Démarrer' button.",
+        "error": "Error fetching history with retry button."
+      },
+      "layout": "Standard list view with cards. Each card uses surfaceSecondary with subtle border. Metrics (date, distance, avg speed) are laid out in a grid. Highlighting overspeeds in red."
+    },
+    {
+      "name": "Alertes",
+      "purpose": "Log of recent overspeed warnings and visual/audio alert management.",
+      "states": {
+        "loading": "Skeleton list rows.",
+        "empty": "Illustration of a clear road with 'Aucune infraction. Parfait !'",
+        "error": "Failed to load alerts."
+      },
+      "layout": "Feed of alert items. Left-aligned icon (red triangle/siren) in a brandTertiary tinted box, with alert details, location, and severity."
+    },
+    {
+      "name": "Récompenses",
+      "purpose": "Claim $FRE token rewards for safe driving.",
+      "states": {
+        "loading": "Skeleton UI for token balance.",
+        "empty": "Zero balance state with motivational copy to start driving.",
+        "error": "Wallet connection error."
+      },
+      "layout": "Hero section with abstract glowing purple background. Huge token balance display. Progress bar (1 FRE / 10 km) towards the 1000 FRE threshold. Primary CTA 'Réclamer' (disabled if <1000). A section below for 'Adresse wallet TON' with a glassmorphic input field."
+    },
+    {
+      "name": "Profil",
+      "purpose": "User driving statistics and global score.",
+      "states": {
+        "loading": "Skeleton profile.",
+        "empty": "No stats available.",
+        "error": "Failed to load profile."
+      },
+      "layout": "Cover image with abstract electric purple glow. Profile info, global compliance score (in green/red depending on health), total distance driven."
+    },
+    {
+      "name": "Paramètres",
+      "purpose": "App settings, audio warnings configuration, map theme options.",
+      "states": {
+        "loading": "Skeleton rows.",
+        "empty": "N/A",
+        "error": "N/A"
+      },
+      "layout": "Sectioned list with toggles for Audio Alerts, Visual Alerts. Use standard list rows with leading icons."
+    }
+  ],
+  "images": {
+    "map_placeholder": {
+      "url": "https://images.unsplash.com/photo-1544259342-306eccfec481?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2NzB8MHwxfHNlYXJjaHwxfHxkYXJrJTIwbmlnaHQlMjBjaXR5JTIwbWFwJTIwdmlldyUyMHRvcCUyMGRvd258ZW58MHx8fHwxNzgxNDYwMTIyfDA&ixlib=rb-4.1.0&q=85",
+      "alt": "Dark night city map view from above"
+    },
+    "rewards_banner": {
+      "url": "https://images.unsplash.com/photo-1638272181967-7d3772a91265?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2NjZ8MHwxfHNlYXJjaHwyfHxhYnN0cmFjdCUyMGVsZWN0cmljJTIwcHVycGxlJTIwZGVlcCUyMGJsdWUlMjBkYXJrJTIwZ2xvd2luZyUyMGJhY2tncm91bmR8ZW58MHx8fHwxNzgxNDYwMTIyfDA&ixlib=rb-4.1.0&q=85",
+      "alt": "Abstract electric purple and deep blue wavy background"
+    },
+    "empty_highway": {
+      "url": "https://images.unsplash.com/photo-1618941240535-234c3212e3e7?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NTYxOTB8MHwxfHNlYXJjaHwxfHxlbXB0eSUyMGRhcmslMjBoaWdod2F5JTIwZHJpdmluZyUyMG5pZ2h0fGVufDB8fHx8MTc4MTQ2MDEyMnww&ixlib=rb-4.1.0&q=85",
+      "alt": "Empty dark highway at night"
+    }
+  },
+  "instructions_to_main_agent": [
+    "Strictly follow the user's request for 6 bottom tabs (Accueil, Trajets, Alertes, Récompenses, Profil, Paramètres). Use a scrollable tab bar if necessary, or pack them closely but keep touch targets readable.",
+    "Map UI: Use react-native-maps. You MUST style the map with a custom JSON map style to match the dark night blue theme (#050B2E). Use a glowing purple (#7A3CFF) line for the route.",
+    "European Speed Limit Sign: Create this entirely with UI components. A white circular View, a thick red border (using the 'error' color token), and black text inside displaying the number.",
+    "Make sure all text inside the app is in French as requested.",
+    "The real-time speed metric needs to be extremely prominent. Change its color dynamically: 'success' (Green) when compliant, 'warning' (Orange) when near limit, 'error' (Red) when overspeeding.",
+    "Vertical timeline: Render this as a floating frosted glass column on the right side of the screen with nodes for 500m, 2km, 5km.",
+    "Rewards screen: Build a Web3-style dashboard with a progress bar mapped to 1000 FRE. Include a TON wallet address input field with 'surfaceTertiary' background.",
+    "Ensure all overlay panels on the map use expo-blur to provide a premium, Glass / Luxe feel, maintaining strong text legibility."
+  ]
+}
