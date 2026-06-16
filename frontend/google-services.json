@@ -7,6 +7,25 @@
   "client": [
     {
       "client_info": {
+        "mobilesdk_app_id": "1:90418522957:android:c5696ad5c6f7e78d622504",
+        "android_client_info": {
+          "package_name": "app.emergent.signospeedguardf541422f"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAzx7X4-8fJ0N6FwoigGLQpnnQb0MOLx50"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
         "mobilesdk_app_id": "1:90418522957:android:cb67ae128edf938a622504",
         "android_client_info": {
           "package_name": "com.signo.app"
