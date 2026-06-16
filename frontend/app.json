@@ -35,7 +35,12 @@
         "VIBRATE"
       ],
       "package": "app.emergent.signospeedguard",
-      "googleServicesFile": "./google-services.json"
+      "googleServicesFile": "./google-services.json",
+      "config": {
+        "googleMaps": {
+          "apiKey": "AIzaSyAzx7X4-8fJ0N6FwoigGLQpnnQb0MOLx50"
+        }
+      }
     },
     "web": {
       "bundler": "metro",
