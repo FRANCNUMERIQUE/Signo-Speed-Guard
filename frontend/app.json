@@ -67,10 +67,15 @@
         {
           "android": {
             "newArchEnabled": false,
-            "kotlinVersion": "1.9.10"
+            "kotlinVersion": "1.9.10",
+            "compileSdkVersion": 35,
+            "targetSdkVersion": 35,
+            "minSdkVersion": 24,
+            "buildToolsVersion": "35.0.0"
           },
           "ios": {
-            "newArchEnabled": false
+            "newArchEnabled": false,
+            "deploymentTarget": "15.1"
           }
         }
       ],
