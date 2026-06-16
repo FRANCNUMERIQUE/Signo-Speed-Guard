@@ -66,13 +66,15 @@
         "expo-build-properties",
         {
           "android": {
-            "newArchEnabled": false
+            "newArchEnabled": false,
+            "kotlinVersion": "1.9.10"
           },
           "ios": {
             "newArchEnabled": false
           }
         }
-      ]
+      ],
+      "./plugins/withKotlinStdlibForce.js"
     ],
     "experiments": {
       "typedRoutes": true
