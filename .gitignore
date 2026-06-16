@@ -79,3 +79,6 @@ backend/.env
 backend/.env.local
 backend/.env.production
 # Note: frontend/.env IS committed (contains only EXPO_PUBLIC_BACKEND_URL — public)
+.env
+.env.*
+*.env
