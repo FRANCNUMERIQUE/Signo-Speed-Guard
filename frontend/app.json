@@ -26,7 +26,6 @@
         "foregroundImage": "./assets/images/adaptive-icon.png",
         "backgroundColor": "#050B2E"
       },
-      "edgeToEdgeEnabled": true,
       "permissions": [
         "ACCESS_FINE_LOCATION",
         "ACCESS_COARSE_LOCATION",
@@ -61,6 +60,17 @@
           "icon": "./assets/images/notification-icon.png",
           "color": "#7A3CFF",
           "defaultChannel": "default"
+        }
+      ],
+      [
+        "expo-build-properties",
+        {
+          "android": {
+            "newArchEnabled": false
+          },
+          "ios": {
+            "newArchEnabled": false
+          }
         }
       ]
     ],
