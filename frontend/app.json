@@ -60,6 +60,15 @@
       ],
       "expo-font",
       [
+        "expo-location",
+        {
+          "isAndroidBackgroundLocationEnabled": true,
+          "isAndroidForegroundServiceEnabled": true,
+          "locationWhenInUsePermission": "Signo utilise votre position pour le suivi de vitesse en temps réel et les alertes de limitation.",
+          "locationAlwaysAndWhenInUsePermission": "Signo utilise votre position en arrière-plan pour continuer à vous avertir des limitations de vitesse pendant la conduite, même quand l'écran est verrouillé."
+        }
+      ],
+      [
         "expo-notifications",
         {
           "icon": "./assets/images/notification-icon.png",
